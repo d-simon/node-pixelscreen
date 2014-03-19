@@ -14,12 +14,12 @@ Let me illustrate the purpose of this library with this *beautiful* ASCI artwork
 
      – – – – – – – – – – – – – – – – – – – – – – – – – – – – –
     |                                                         |
-    |                      PixelScreen                        |
+    |                       PixelScreen                       |
     |                                                         |
     | – – – – – – – – – – – – – –  – – – – – – – – – – – – –  |
     ||                           ||                          ||
     ||                           ||                          ||
-    ||    Screen #1              ||               Screen #2  ||
+    ||         Screen #1         ||        Screen #2         ||
     ||                           ||                          ||
     ||                           ||                          ||
     | – – – – – – – – – – – – – –  – – – – – – – – – – – – –  |
@@ -44,7 +44,7 @@ Like with the screens  **1 & 2**, you can simply use Pixelscreen to divide an in
     |                                                         |
      – – – – – – – – – – – – – – – – – – – – – – – – – – – – –
 
-Also, the Screens **3 & 4 ** illustratethere is no limitation as to overlapping or multiple screens listening to the same area.
+Also, the Screens **3 & 4** illustratethere is no limitation as to overlapping or multiple screens listening to the same area.
 
      – – – – – – – – – – – – – – – – – – – – – – – – – – – – –
     |                                                         |
