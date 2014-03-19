@@ -46,25 +46,28 @@ function PixelScreen (options) {
     this.width = opts.width;
     this.height = opts.height;
     this.channels = opts.channels;
+    this.image = createImageArray(this.width, this.height, this.channels);
+    this.screens = [];
 }
-
-PixelScreen.prototype.screens = [];
 
 PixelScreen.prototype.registerScreen = function (name, options, callback) {
     if (!name || this.screens[name]) throw new Error('Screen "' + name + '" already exists!');
     this.screens[name] = new SubScreen(name, options, callback);
+    return this;
 };
 
 PixelScreen.prototype.unregisterScreen = function (name) {
     if (!name || !this.screens[name]) throw new Error('Screen "' + name + '" doesn\'t exist!');
     this.screen[name] = null;
+    return this;
 };
 
 PixelScreen.prototype.update = function (input) {
     if (!input || !input.length) throw new Error('No input!');
-    if (input.length !== this.height ||
-        input[0].length !== this.width) throw new Error('Invalid dimensions!');
     if (input[0][0].length !== this.channels) throw new Error('Invalid no. of channels!');
+    if (input.length !== this.height ||
+        input[0].length !== this.width) throw new Error('Invalid dimensions! (' + input[0].length + 'x' + input.length +
+                                                        ' instead of ' + this.width + 'x' + this.height + ')');
 
     this.image = _.cloneDeep(input);
     for (screen in this.screens) {
@@ -73,6 +76,7 @@ PixelScreen.prototype.update = function (input) {
         if(screen.dmx === true) pixelImage = this.arrayToDMX(pixelImage);
         screen.callback(null, pixelImage);
     }
+    return this;
 };
 
 PixelScreen.prototype.getImage = function (name) {
