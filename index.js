@@ -19,10 +19,10 @@ function SubScreen (name, options, callback) {
     this.channels = opts.channels;
     this.dmx = opts.dmx;
     this.callback = callback;
-    this.image = this.createImageArray(this.width, this.height, this.channels);
+    this.image = createImageArray(this.width, this.height, this.channels);
 }
 
-SubScreen.prototype.createImageArray = function (width, height, channels) {
+function createImageArray (width, height, channels) {
     var array = [];
     for (var i = 0; i < height; i++) {
         array.push([])
