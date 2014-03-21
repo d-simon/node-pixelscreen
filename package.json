@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "lodash": "~2.4.1",
-    "extend": "~1.2.1"
+    "extend": "~1.2.1",
+    "terminal-pixelscreen": "0.0.1"
   },
   "keywords": [
     "pixelscreen",
