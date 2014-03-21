@@ -1,6 +1,6 @@
 {
   "name": "pixelscreen",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Create virtual screens and populate them with (partial) subscreens.",
   "main": "index.js",
   "repository": {
