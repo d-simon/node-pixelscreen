@@ -67,8 +67,8 @@ PixelScreen.prototype.unregisterScreen = function (name) {
 };
 
 PixelScreen.prototype.forceUpdate = function () {
-    for (screen in this.screens) {
-        var screen = this.screens[screen]
+    for (var screenName in this.screens) {
+        var screen = this.screens[screenName]
           , pixelImage = this.getImage(screen.name);
         if(screen.dmx === true) pixelImage = this.arrayToDMX(pixelImage);
         screen.callback(null, pixelImage);
@@ -88,16 +88,7 @@ PixelScreen.prototype.update = function (input) {
                                                         ' instead of ' + this.width + 'x' + this.height + ')');
 
     this.image = _.cloneDeep(input);
-    for (screen in this.screens) {
-        var screen = this.screens[screen]
-          , pixelImage = this.getImage(screen.name);
-        if(screen.dmx === true) pixelImage = this.arrayToDMX(pixelImage);
-        screen.callback(null, pixelImage);
-    }
-    if (this.displayScreen === true) {
-        this.terminalScreen.update(this.image);
-        this.terminalScreen.paint();
-    }
+    this.forceUpdate();
     return this;
 };
 
