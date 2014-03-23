@@ -7,6 +7,8 @@ Supports Multi-Channel Pixels (RGB LED) Conversion to DMX.
 
 Also allows to output the main screen to console.
 
+[![Code Climate](https://codeclimate.com/github/d-simon/node-pixelscreen.png)](https://codeclimate.com/github/d-simon/node-pixelscreen)
+
 ## Install
 
     npm install pixelscreen
