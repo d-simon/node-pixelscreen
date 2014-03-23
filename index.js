@@ -1,4 +1,4 @@
-jjvar TerminalScreen = require('terminal-pixelscreen')
+var TerminalScreen = require('terminal-pixelscreen')
   , _ = require('lodash')
   , extend = require('extend');
 
