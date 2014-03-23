@@ -36,7 +36,6 @@ function createImageArray (width, height, channels) {
     return array;
 }
 
-
 function PixelScreen (options) {
     var opts = extend({
         width: 1,
