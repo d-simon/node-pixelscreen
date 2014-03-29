@@ -1,4 +1,4 @@
-pixelscreen
+pixelscreen [![Code Climate](https://codeclimate.com/github/d-simon/node-pixelscreen.png)](https://codeclimate.com/github/d-simon/node-pixelscreen) [![Dependencies](https://david-dm.org/d-simon/node-pixelscreen.png)](https://david-dm.org/d-simon/node-pixelscreen)
 ===========
 
 Create virtual screens and populate them with subscreens.
@@ -7,7 +7,7 @@ Supports Multi-Channel Pixels (RGB LED) Conversion to DMX.
 
 Also allows to output the main screen to console.
 
-[![Code Climate](https://codeclimate.com/github/d-simon/node-pixelscreen.png)](https://codeclimate.com/github/d-simon/node-pixelscreen)
+
 
 ## Install
 
